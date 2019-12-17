@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{%load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <link rel="stylesheet" href={% static "/css/sta.css" %}>
+  <img src={% static "image/1.jpg" %} alt="">
+  <body>
+    <h1>Hello Templates</h1>
+    <h2>Hello SHekhar</h2>
+    <h2>Hello Shekhar</h2>
+    {{list}}
+    {% for i in context %}
+      <h1>{{i}}</h1>
+    {% endfor %}
+    {%for i,j in di.items%}
+    <h2>{{i}}:{{j}}</h2>
+    {% endfor %}
+    {%for i in di.keys%}
+    <h2>Keys:{{i}}</h2>
+    {% endfor %}
+    {%for j in di.values%}
+    <h2>{{j}}</h2>
+    {% endfor %}
+
+  </body>
+</html>
